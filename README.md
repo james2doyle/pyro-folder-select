@@ -18,9 +18,12 @@ How To Use
 This field returns the folder id that you selected. Here is the basic usage.
 
 ``` html
-{{ files:listing folder=page:my_chosen_slug }}
-  <img src="{{ url:site }}files/thumb/{{ id }}/200/150" alt="{{ description }}"/>
-{{ /files:listing }}
+<!-- -1 means the dropdown was set to 'None' -->
+{{ if page:my_chosen_slug != '-1' }}
+  {{ files:listing folder=page:my_chosen_slug }}
+    <img src="{{ url:site }}files/thumb/{{ id }}/200/150" alt="{{ description }}"/>
+  {{ /files:listing }}
+{{ endif }}
 ```
 
 License
