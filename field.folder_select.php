@@ -35,7 +35,7 @@ class Field_folder_select
 	{
 		$folders = $this->CI->file_folders_m->get_all();
 		$values = array_for_select($folders, 'id', 'name');
-		$dropdown = form_dropdown($data['form_slug'], $values, $data['value']);
+		$dropdown = form_dropdown($data['form_slug'], array('-1' => 'None') + $values, $data['value']);
 		return sprintf("<div id=\"%s_folder_select\" class=\"folder_select\">%s</div>", $data['form_slug'], $dropdown);
 	}
 
