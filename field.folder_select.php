@@ -12,7 +12,7 @@ class Field_folder_select
 {
 	public $field_type_slug    = 'folder_select';
 	public $db_col_type        = 'int';
-	public $version            = '1.0.0';
+	public $version            = '1.0.1';
 	public $author             = array('name'=>'James Doyle', 'url'=>'http://github.com/james2doyle/pyro-folder-select');
 	// public $custom_parameters  = array('folder_select');
 
